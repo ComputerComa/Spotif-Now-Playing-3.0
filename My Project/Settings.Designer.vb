@@ -101,6 +101,18 @@ Namespace My
                 Me("webhooks_enabled") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property history_length() As Integer
+            Get
+                Return CType(Me("history_length"),Integer)
+            End Get
+            Set
+                Me("history_length") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

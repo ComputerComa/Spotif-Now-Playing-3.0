@@ -29,14 +29,15 @@ Partial Class Form1
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BTN_TTS_TGL_ON = New System.Windows.Forms.Button()
         Me.BTN_TTS_TGL_OFF = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BTN_DISC_WH_TGL_ON = New System.Windows.Forms.Button()
+        Me.BTN_DISC_WH_TGL_OFF = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Txt_Disc_WH_URL = New System.Windows.Forms.TextBox()
+        Me.Txt_DC_User = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Btn_Save = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LB_SongHistory
@@ -76,23 +77,25 @@ Partial Class Form1
         Me.BTN_TTS_TGL_OFF.Text = "OFF"
         Me.BTN_TTS_TGL_OFF.UseVisualStyleBackColor = True
         '
-        'Button1
+        'BTN_DISC_WH_TGL_ON
         '
-        Me.Button1.Location = New System.Drawing.Point(433, 133)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BTN_DISC_WH_TGL_ON.Enabled = False
+        Me.BTN_DISC_WH_TGL_ON.Location = New System.Drawing.Point(433, 133)
+        Me.BTN_DISC_WH_TGL_ON.Name = "BTN_DISC_WH_TGL_ON"
+        Me.BTN_DISC_WH_TGL_ON.Size = New System.Drawing.Size(75, 23)
+        Me.BTN_DISC_WH_TGL_ON.TabIndex = 4
+        Me.BTN_DISC_WH_TGL_ON.Text = "ON"
+        Me.BTN_DISC_WH_TGL_ON.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BTN_DISC_WH_TGL_OFF
         '
-        Me.Button2.Location = New System.Drawing.Point(514, 133)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Button1"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BTN_DISC_WH_TGL_OFF.Enabled = False
+        Me.BTN_DISC_WH_TGL_OFF.Location = New System.Drawing.Point(514, 133)
+        Me.BTN_DISC_WH_TGL_OFF.Name = "BTN_DISC_WH_TGL_OFF"
+        Me.BTN_DISC_WH_TGL_OFF.Size = New System.Drawing.Size(75, 23)
+        Me.BTN_DISC_WH_TGL_OFF.TabIndex = 4
+        Me.BTN_DISC_WH_TGL_OFF.Text = "OFF"
+        Me.BTN_DISC_WH_TGL_OFF.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -112,50 +115,60 @@ Partial Class Form1
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Discord Webhooks"
         '
-        'TextBox1
+        'Txt_Disc_WH_URL
         '
-        Me.TextBox1.Location = New System.Drawing.Point(433, 177)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(344, 20)
-        Me.TextBox1.TabIndex = 6
+        Me.Txt_Disc_WH_URL.Location = New System.Drawing.Point(433, 177)
+        Me.Txt_Disc_WH_URL.Name = "Txt_Disc_WH_URL"
+        Me.Txt_Disc_WH_URL.Size = New System.Drawing.Size(344, 20)
+        Me.Txt_Disc_WH_URL.TabIndex = 6
         '
-        'TextBox2
+        'Txt_DC_User
         '
-        Me.TextBox2.Location = New System.Drawing.Point(433, 229)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(130, 20)
-        Me.TextBox2.TabIndex = 7
+        Me.Txt_DC_User.Location = New System.Drawing.Point(433, 229)
+        Me.Txt_DC_User.Name = "Txt_DC_User"
+        Me.Txt_DC_User.Size = New System.Drawing.Size(130, 20)
+        Me.Txt_DC_User.TabIndex = 7
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(430, 159)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(58, 13)
+        Me.Label3.Size = New System.Drawing.Size(118, 13)
         Me.Label3.TabIndex = 8
-        Me.Label3.Text = "TTS Notifs"
+        Me.Label3.Text = "Discord Webhook URL"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(430, 200)
+        Me.Label4.Location = New System.Drawing.Point(430, 213)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(58, 13)
+        Me.Label4.Size = New System.Drawing.Size(92, 13)
         Me.Label4.TabIndex = 9
-        Me.Label4.Text = "TTS Notifs"
+        Me.Label4.Text = "Discord username"
+        '
+        'Btn_Save
+        '
+        Me.Btn_Save.Location = New System.Drawing.Point(433, 256)
+        Me.Btn_Save.Name = "Btn_Save"
+        Me.Btn_Save.Size = New System.Drawing.Size(75, 23)
+        Me.Btn_Save.TabIndex = 10
+        Me.Btn_Save.Text = "Save"
+        Me.Btn_Save.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Btn_Save)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Txt_DC_User)
+        Me.Controls.Add(Me.Txt_Disc_WH_URL)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BTN_DISC_WH_TGL_OFF)
+        Me.Controls.Add(Me.BTN_DISC_WH_TGL_ON)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BTN_TTS_TGL_OFF)
         Me.Controls.Add(Me.BTN_TTS_TGL_ON)
@@ -173,12 +186,13 @@ Partial Class Form1
     Friend WithEvents Timer1 As Timer
     Friend WithEvents BTN_TTS_TGL_ON As Button
     Friend WithEvents BTN_TTS_TGL_OFF As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents BTN_DISC_WH_TGL_ON As Button
+    Friend WithEvents BTN_DISC_WH_TGL_OFF As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Txt_Disc_WH_URL As TextBox
+    Friend WithEvents Txt_DC_User As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents Btn_Save As Button
 End Class
