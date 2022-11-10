@@ -113,6 +113,48 @@ Namespace My
                 Me("history_length") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("816")>  _
+        Public ReadOnly Property settings_visible_width() As Integer
+            Get
+                Return CType(Me("settings_visible_width"),Integer)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("408")>  _
+        Public ReadOnly Property settings_hidden_width() As Integer
+            Get
+                Return CType(Me("settings_hidden_width"),Integer)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property settings_visible() As Boolean
+            Get
+                Return CType(Me("settings_visible"),Boolean)
+            End Get
+            Set
+                Me("settings_visible") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("489")>  _
+        Public Property frm_height() As Integer
+            Get
+                Return CType(Me("frm_height"),Integer)
+            End Get
+            Set
+                Me("frm_height") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -17,5 +17,17 @@
     <Setting Name="history_length" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">10</Value>
     </Setting>
+    <Setting Name="settings_visible_width" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">816</Value>
+    </Setting>
+    <Setting Name="settings_hidden_width" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">408</Value>
+    </Setting>
+    <Setting Name="settings_visible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="frm_height" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">489</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
