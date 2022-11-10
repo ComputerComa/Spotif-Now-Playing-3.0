@@ -66,7 +66,6 @@ Public Class Form1
                     'Debug.WriteLine("Cur song:" + title)
                     title_history.Add(title)
                     trim_history(App_Settings.history_length)
-                    Update_Hist_LB()
                     Assemble_TTS_Announcemet(title, App_Settings.tts_enabled)
                 End If
             Else
@@ -85,6 +84,7 @@ Public Class Form1
         If title_history.Count > SLen Then
             title_history.RemoveAt(0)
         End If
+        Update_Hist_LB()
         Return True
     End Function
     Function Update_Hist_LB()
@@ -130,6 +130,7 @@ Public Class Form1
     End Function
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Get_Proc_title()
+        trim_history(App_Settings.history_length)
     End Sub
     Function Update_TTS_BTNS()
         If App_Settings.tts_enabled Then
