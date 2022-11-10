@@ -175,10 +175,12 @@ Public Class Form1
             Dim afooter As New Footer() With {
             .text = DateTime.Now.ToString("HH:mm:ss")
             }
+            Dim rcolor = rnd_color_hex()
             Dim embed As New Embed With {
                 .title = "Now playing",
                 .description = message,
-                .footer = afooter
+                .footer = afooter,
+                .color = rcolor
             }
             hook_data.embeds = {embed}
             hook.PostData(hook_data)
@@ -208,9 +210,9 @@ Public Class Form1
         Me.WindowState = FormWindowState.Normal
         NotifyIcon1.Visible = False
     End Sub
-    Function rnd_color_hex() As String
+    Function rnd_color_hex() As Integer
         Dim random_rand = New Random()
-        Dim color = String.Format("#{0:X6}", random_rand.Next(&H1000000))
+        Dim color = random_rand.Next(&H1000000)
         Return color
     End Function
 
