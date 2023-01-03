@@ -63,7 +63,7 @@ Partial Class Form1
         '
         'Timer1
         '
-        Me.Timer1.Interval = 500
+        Me.Timer1.Interval = 1000
         '
         'BTN_TTS_TGL_ON
         '

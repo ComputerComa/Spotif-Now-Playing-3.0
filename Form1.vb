@@ -119,13 +119,19 @@ Public Class Form1
         Return True
     End Function
     Function PopUpNotif(info As String)
-        Dim popupNotifEnt = New PopupNotifier()
-        popupNotifEnt.ContentText = info
-        popupNotifEnt.BodyColor = Color.White
-        popupNotifEnt.Delay = 5000
-        popupNotifEnt.ContentPadding = New Padding(12)
-        popupNotifEnt.TitleText = "Spotify Now Playing"
+        Dim popupNotifEnt = New PopupNotifier With {
+            .ContentText = info,
+            .BodyColor = Color.White,
+            .Delay = 5000,
+            .ContentPadding = New Padding(25),
+            .TitleText = "Spotify Now Playing",
+            .ShowCloseButton = False,
+            .ShowOptionsButton = False
+        }
         popupNotifEnt.Popup()
+        Dim font As New Font(FontFamily.GenericSansSerif, 12)
+        popupNotifEnt.ContentFont = font
+        'My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Beep)
         Return True
     End Function
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
